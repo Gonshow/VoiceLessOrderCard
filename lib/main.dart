@@ -94,7 +94,7 @@ class _MyAppState extends State<MyApp> {
                 toolbarHeight: 0.09*size.height,
                 backgroundColor: Colors.grey[800].withOpacity(0.8),
                 title: Text(
-                  'オーダーカード',
+                  'オーダーカードだよ',
                   style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho'),
                   textScaleFactor: 1.3,
                 ),
