@@ -1,6 +1,5 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+//import 'package:auto_size_text/auto_size_text.dart';
 
 void main() {
   runApp(Home());
@@ -73,7 +72,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final platformFactor = MediaQuery.of(context).textScaleFactor ?? 1;
+    //final bottomSpace = MediaQuery.of(context).viewInsets.bottom;
     return Stack(
         children: <Widget> [
           Container(
@@ -87,6 +86,7 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           Scaffold(
+            //resizeToAvoidBottomInset: false,
             backgroundColor: Colors.transparent,
             appBar: AppBar(
               automaticallyImplyLeading: false,
@@ -94,150 +94,168 @@ class _MyAppState extends State<MyApp> {
                 toolbarHeight: 0.09*size.height,
                 backgroundColor: Colors.grey[800].withOpacity(0.8),
                 title: Text(
-                  'オーダーカードでっせ',
+                  'オーダーカード',
                   style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho'),
                   textScaleFactor: 1.3,
                 ),
             ),
             body: Center(
-              child: Container(
-                  alignment: Alignment.center,
-                  height: 0.745*size.height,
-                  width: 0.86*size.width,
-                  child: Card(
-                    elevation: 10,
-                    shadowColor: Colors.grey[900],
-                    color: Colors.grey[200],
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(0.02*size.width, 0, 0.02*size.width, 0),
-                      decoration: BoxDecoration(
-                        image: new DecorationImage(
-                          image: new AssetImage('assets/paper.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                        borderRadius: BorderRadius.circular(3),
+              child: SingleChildScrollView(
+                child: Container(
+                    //padding: EdgeInsets.fromLTRB(0, 0.12*size.height, 0, 0.12*size.height),
+                    alignment: Alignment.center,
+                    height: 0.76*size.height,
+                    width: 0.88*size.width,
+                    child: Card(
+                      elevation: 10,
+                      shadowColor: Colors.grey[900],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: <Widget>[
-                          SizedBox(height: 10.0,),
-                          Text(
-                            titleList[0],
-                            style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho',fontSize: 18.5),
-                          ),
-                          SizedBox(height: 12.0,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              customRadio1(iconList1[0], 0, nameList1[0]),
-                              Container(
-                                  margin: EdgeInsets.fromLTRB(0.02*size.width, 0, 0.02*size.width, 0),
-                                  child: customRadio1(iconList1[1], 1, nameList1[1])
-                              ),
-                              customRadio1(iconList1[2], 2, nameList1[2]),
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(0.02*size.width, 0, 0.02*size.width, 0),
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: FractionalOffset.topLeft,
+                            end: FractionalOffset.bottomRight,
+                            colors: [
+                              Color(0xffffffff),
+                              Color(0xffcccccc),
+                            ],
+                            stops: const [
+                              0.0,
+                              1.0,
                             ],
                           ),
-                          SizedBox(height: 7.0,),
-                          Divider(height: 20,thickness:2,color: Colors.black12,indent: 50,endIndent: 50,),
-                          SizedBox(height: 7.0,),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              titleList[0],
+                              style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho',),
+                              textScaleFactor: 1.3,
+                            ),
+                            SizedBox(height: 0.02*size.width),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: <Widget>[
+                                customRadio1(iconList1[0], 0, nameList1[0], size),
+                                Container(
+                                    margin: EdgeInsets.fromLTRB(0.02*size.width, 0, 0.02*size.width, 0),
+                                    child: customRadio1(iconList1[1], 1, nameList1[1], size)
+                                ),
+                                customRadio1(iconList1[2], 2, nameList1[2], size),
+                              ],
+                            ),
+                            SizedBox(height: 0.02*size.width),
+                            Divider(height: 0.04*size.width,thickness:2,color: Colors.black12,indent: 50,endIndent: 50,),
+                            SizedBox(height: 0.01*size.width),
 
-                          Text(
-                            titleList[1],
-                            style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho',fontSize: 18.5),
-                          ),
-                          SizedBox(height: 10.0,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              customRadio2(iconList2[0], 0, nameList2[0]),
-                              customRadio2(iconList2[1], 1, nameList2[1]),
-                            ],
-                          ),
-                          SizedBox(height: 7.0,),
-                          Divider(height: 20,thickness:2,color: Colors.black12,indent: 50,endIndent: 50,),
-                          SizedBox(height: 7.0,),
-                          Text(
-                            titleList[2],
-                            style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho',fontSize: 18.5),
-                          ),
-                          //Divider(height: 20,thickness:2,color: Colors.black12,indent: 145,endIndent: 145,),
-                          SizedBox(height: 10.0,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              customRadio3(iconList3[0], 0, nameList3[0]),
-                              customRadio3(iconList3[1], 1, nameList3[1]),
-                            ],
-                          ),
-                          SizedBox(height: 7.0,),
-                          Divider(height: 20,thickness:2,color: Colors.black12,indent: 50,endIndent: 50,),
-                          SizedBox(height: 5.0,),
-                          Text(
-                            titleList[3],
-                            style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho',fontSize: 18.5),
-                          ),
-                          SizedBox(height: 3.0,),
-                          //Divider(height: 10,color: Colors.amber,indent: 150,endIndent: 150,),
-                          Container(
-                            margin: EdgeInsets.fromLTRB(50, 0, 50, 0),
-                            child: Column(
-                              children: <Widget> [
-                                Visibility(
-                                  child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: <Widget> [
-                                        Visibility(
-                                          child: InkWell(
-                                            onTap: () {
-                                              _changed(nowInput, valueText);
-                                            },
-                                            child: Container(
-                                              padding: EdgeInsets.only(top:20),
-                                              child: Center(
-                                                child: Text(
-                                                  valueText,
-                                                  style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho', fontSize: 16.5,color: Colors.redAccent[400]),
+                            Text(
+                              titleList[1],
+                              style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho'),
+                              textScaleFactor: 1.3,
+                            ),
+                            SizedBox(height: 0.02*size.width),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: <Widget>[
+                                customRadio2(iconList2[0], 0, nameList2[0], size),
+                                customRadio2(iconList2[1], 1, nameList2[1], size),
+                              ],
+                            ),
+                            SizedBox(height: 0.02*size.width),
+                            Divider(height: 0.04*size.width,thickness:2,color: Colors.black12,indent: 50,endIndent: 50,),
+                            SizedBox(height: 0.01*size.width),
+                            Text(
+                              titleList[2],
+                              style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho'),
+                              textScaleFactor: 1.3,
+                            ),
+                            //Divider(height: 20,thickness:2,color: Colors.black12,indent: 145,endIndent: 145,),
+                            SizedBox(height: 0.02*size.width),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: <Widget>[
+                                customRadio3(iconList3[0], 0, nameList3[0], size),
+                                customRadio3(iconList3[1], 1, nameList3[1], size),
+                              ],
+                            ),
+                            SizedBox(height: 0.02*size.width),
+                            Divider(height: 0.04*size.width,thickness:2,color: Colors.black12,indent: 50,endIndent: 50,),
+                            SizedBox(height: 0.01*size.width),
+                            Text(
+                              titleList[3],
+                              style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho'),
+                              textScaleFactor: 1.3,
+                            ),
+                            SizedBox(height: 0.02*size.width),
+                            Container(
+                              //margin: EdgeInsets.fromLTRB(50, 0, 50, 0),
+                              child: Column(
+                                children: <Widget> [
+                                  Visibility(
+                                    child: Wrap(
+                                        children: <Widget> [
+                                          Visibility(
+                                            child: InkWell(
+                                              onTap: () {
+                                                _changed(nowInput, valueText);
+                                              },
+                                              child: Container(
+                                                child: Center(
+                                                  child: Text(
+                                                    valueText,
+                                                    textAlign: TextAlign.center,
+                                                    softWrap: true,
+                                                    maxLines: 3,
+                                                    style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho', color: Colors.redAccent[400]),
+                                                    textScaleFactor: 1.4,
+                                                  ),
                                                 ),
                                               ),
                                             ),
+                                            visible: !formIsNull,
+                                            maintainState: !formIsNull,
                                           ),
-                                          visible: !formIsNull,
-                                          maintainState: !formIsNull,
-                                        ),
-                                        Visibility(
-                                          child: IconButton(
-                                            icon: Icon(Icons.edit,size: 16,color: Colors.grey,),
-                                            onPressed: () {
-                                              _changed(nowInput, valueText);
-                                            },
+                                          Visibility(
+                                            child: IconButton(
+                                              icon: Icon(Icons.edit,size: 0.03*size.height,color: Colors.grey,),
+                                              onPressed: () {
+                                                _changed(nowInput, valueText);
+                                              },
+                                            ),
+                                            visible: formIsNull,
                                           ),
-                                          visible: formIsNull,
-                                        ),
-                                      ]
-                                  ),
-                                  visible: !nowInput,
-                                ),
-                                Visibility(
-                                  child: TextFormField(
-                                    decoration: InputDecoration(
-                                      labelText: 'フリーワード',
+                                        ]
                                     ),
-                                    controller: _mycontroller,
+                                    visible: !nowInput,
+                                    maintainState: !nowInput,
                                   ),
-                                  visible: nowInput,
-                                ),
-                              ],
+                                  Visibility(
+                                    child: TextFormField(
+                                      autofocus: true,
+                                      maxLength: 48,
+                                      maxLines: 2,
+                                      decoration: InputDecoration(
+                                        labelText: 'フリーワード(最大3行48文字まで表示できます)',
+                                      ),
+                                      controller: _mycontroller,
+                                    ),
+                                    visible: nowInput,
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
+              ),
             ),
             floatingActionButton: Visibility(
               child: FloatingActionButton(
@@ -276,29 +294,26 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  Widget customRadio1(IconData icon,int index, String name){
+  Widget customRadio1(IconData icon,int index, String name, Size size){
     return OutlineButton(
       onPressed: () => changeSecondaryIndex1(index),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
-      borderSide: BorderSide(width: 3, color: secondaryIndex1 == index ? Colors.redAccent[400] : Colors.grey),
-      child: Expanded(
-        child: Column(
-            children: <Widget> [
-              Icon(icon,size: 60,color:  secondaryIndex1 == index ? Colors.redAccent[400] : Colors.grey,),
-              Container(
-                color: Colors.blue,
-                child: Text(
-                  name,
-                  style: TextStyle(fontWeight: FontWeight.bold, color: secondaryIndex1 == index ? Colors.redAccent[400] : Colors.grey),
-                  textScaleFactor: 0.9,
-                ),
+      borderSide: BorderSide(width: 4, color: secondaryIndex1 == index ? Colors.redAccent[400] : Colors.grey),
+      child: Column(
+          children: <Widget> [
+            Icon(icon,color:  secondaryIndex1 == index ? Colors.redAccent[400] : Colors.grey,size: 0.07*size.height,),
+            Container(
+              child: Text(
+                name,
+                style: TextStyle(fontWeight: FontWeight.bold, color: secondaryIndex1 == index ? Colors.redAccent[400] : Colors.grey),
+                textScaleFactor: 1,
               ),
-            ]
-        ),
+            ),
+          ]
       ),
     );
   }
-  Widget customRadio2(IconData icon,int index, String name){
+  Widget customRadio2(IconData icon,int index, String name, Size size){
     return OutlineButton(
       onPressed: () => changeSecondaryIndex2(index),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
@@ -307,24 +322,24 @@ class _MyAppState extends State<MyApp> {
           children: <Widget> [
             Icon(
               icon,
-              color: secondaryIndex2 == index ? (index == 0 ? Colors.redAccent[400]: Colors.blue) : Colors.grey, size: 60,
+              color: secondaryIndex2 == index ? (index == 0 ? Colors.redAccent[400]: Colors.blue) : Colors.grey, size: 0.07*size.height,
             ),
             Text(
               name,
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 15.5,
                   color:
                   secondaryIndex2 == index
                       ? index == 0 ? Colors.red : Colors.blue
                       : Colors.grey
               ),
+              textScaleFactor: 1,
             ),
           ]
       ),
     );
   }
-  Widget customRadio3(IconData icon,int index, String name){
+  Widget customRadio3(IconData icon,int index, String name, Size size){
     return OutlineButton(
       onPressed: () => changeSecondaryIndex3(index),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
@@ -333,18 +348,18 @@ class _MyAppState extends State<MyApp> {
           children: <Widget> [
             Icon(
               icon,
-              color: secondaryIndex3 == index ? (index == 0 ? Colors.redAccent[400]: Colors.blue) : Colors.grey, size: 60,
+              color: secondaryIndex3 == index ? (index == 0 ? Colors.redAccent[400]: Colors.blue) : Colors.grey, size: 0.07*size.height,
             ),
             Text(
               name,
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 15.5,
                   color:
                   secondaryIndex3 == index
                       ? index == 0 ? Colors.red : Colors.blue
                       : Colors.grey
               ),
+              textScaleFactor: 1,
             ),
           ]
       ),
