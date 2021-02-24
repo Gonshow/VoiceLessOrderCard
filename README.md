@@ -6,11 +6,7 @@
 
 また、「その他」の欄はフリーワードで要望を入力し、提示できます。
 
-<img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg">
-<img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg">
-<img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg">
-<img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg">
-<img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg">
+<img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg"><img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg"><img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg"><img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg"><img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg">
 
 
 
