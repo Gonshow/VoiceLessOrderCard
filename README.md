@@ -4,13 +4,13 @@
 
 会計時、カード画面を提示することで「支払い方法」「レジ袋の要・不要」「温めの要・不要」の意思表示ができます。
 
-<img width="250" src="https://user-images.githubusercontent.com/38319910/108953478-9a4c2280-76ae-11eb-9ff4-7ac4d9c98810.png">
-
-
-
 また、「その他」の欄はフリーワードで要望を入力し、提示できます。
 
-<img width="250" src="https://user-images.githubusercontent.com/38319910/108953391-75f04600-76ae-11eb-9d25-e9f8dee35cff.png">
+<img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg">
+<img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg">
+<img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg">
+<img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg">
+<img width="150" src="https://user-images.githubusercontent.com/38319910/108953910-51489e00-76af-11eb-952a-7241b4d37b68.jpeg">
 
 
 
