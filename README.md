@@ -9,7 +9,7 @@
 
 また、「その他」の欄はフリーワードで要望を入力し、提示できます。
 
-<img src="https://user-images.githubusercontent.com/38319910/108952986-c87d3280-76ad-11eb-9f66-e1ed631bd0b4.jpeg" width="250">
+<img width="250" src="https://user-images.githubusercontent.com/38319910/108953391-75f04600-76ae-11eb-9d25-e9f8dee35cff.png">
 
 
 
