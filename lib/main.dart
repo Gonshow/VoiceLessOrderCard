@@ -8,6 +8,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        //debugShowCheckedModeBanner: false,
         theme: ThemeData(),
         home: MyApp()
     );
@@ -93,10 +94,13 @@ class _MyAppState extends State<MyApp> {
                 elevation: 0.0,
                 toolbarHeight: 0.09*size.height,
                 backgroundColor: Colors.grey[800].withOpacity(0.8),
-                title: Text(
-                  'オーダーカード',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho'),
-                  textScaleFactor: 1.3,
+                title: Center(
+                  child: Text(
+                    'オーダーカード',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Mincho'),
+                    textAlign: TextAlign.center,
+                    textScaleFactor: 1.3,
+                  ),
                 ),
             ),
             body: Center(
