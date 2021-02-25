@@ -32,9 +32,24 @@ dependencies:
 
 dev_dependencies:
   flutter_launcher_icons: "^0.8.0"
-
+  flutter_native_splash: ^0.3.0
   flutter_test:
     sdk: flutter
+
+flutter_native_splash:
+  image: "assets/splash_image.jpeg"
+  color: "F45843"
+  # android_gravity can be one of the following Android Gravity (see
+  # https://developer.android.com/reference/android/view/Gravity): bottom, center,
+  # center_horizontal, center_vertical, clip_horizontal, clip_vertical, end, fill, fill_horizontal,
+  # fill_vertical, left, right, start, or top.
+  android_gravity: fill
+  #
+  # ios_content_mode can be one of the following iOS UIView.ContentMode (see
+  # https://developer.apple.com/documentation/uikit/uiview/contentmode): scaleToFill,
+  # scaleAspectFit, scaleAspectFill, center, top, bottom, left, right, topLeft, topRight,
+  # bottomLeft, or bottomRight.
+  ios_content_mode: fill
 
 flutter_icons:
   android: true
