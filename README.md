@@ -2,7 +2,7 @@
 
 ## 声を出さずにコンビニやスーパーでの会計を済ませることのできるアプリです。
 
-GooglePlayに後悔してます
+GooglePlayに公開してます。
 
 https://play.google.com/store/apps/details?id=com.gonshow.voice_less_order_card
 
