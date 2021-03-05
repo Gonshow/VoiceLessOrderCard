@@ -2,6 +2,10 @@
 
 ## 声を出さずにコンビニやスーパーでの会計を済ませることのできるアプリです。
 
+GooglePlayに後悔してます
+
+https://play.google.com/store/apps/details?id=com.gonshow.voice_less_order_card
+
 会計時、カード画面を提示することで「支払い方法」「レジ袋の要・不要」「温めの要・不要」の意思表示ができます。
 
 また、「その他」の欄はフリーワードで要望を入力し、提示できます。
