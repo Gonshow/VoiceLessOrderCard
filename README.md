@@ -2,7 +2,7 @@
 
 ## 声を出さずにコンビニやスーパーでの会計を済ませることのできるアプリです。
 
-GooglePlayに公開してます。
+GooglePlayにてアプリを公開してます。
 
 https://play.google.com/store/apps/details?id=com.gonshow.voice_less_order_card
 
@@ -24,4 +24,3 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-
